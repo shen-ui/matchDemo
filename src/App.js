@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import './App.css';
 
+
 function App() {
+
+  const [data, setData] = useState(0);
+
+  // useEffect updates dom when an event happens
+  useEffect(() => {
+    axios
+      .get(' https://static.yinzcam.com/interviews/web/api/match1.xml', {
+        'Content-Type': "applications/xml"
+      })
+      .then(function(res){
+        console.log(res.data);
+        setData(res.data);
+      })
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data}
     </div>
   );
 }
