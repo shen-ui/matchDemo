@@ -1,11 +1,13 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import loading from './resources/loading.gif'
 import './App.css';
+import { useState, useEffect } from 'react';
+import SubBoard from './Components/SubBoard';
+import Field from './Components/Field';
 
 const convert = require("xml-js");
 
 function App() {
-
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -17,20 +19,24 @@ function App() {
         const parser = JSON.parse(
           convert.xml2json(res.data, {compact: true, spaces: 2})
         );
-        console.log(parser.Formation);
-        // potentially need to use more states
-        setData(parser);
+        setData(parser.Formation);
       })
       .catch((err) => {
         console.log("error: ", err);
       })
   }, []);
 
-  return (
+  return(
     <div className="App">
-      {}
+      {data == null
+        ? <img src={loading} alt='loading'/>
+        : <div>
+            <Field forms={data.Formations}/>
+            <SubBoard subs={data.Substitutes}/>
+          </div>
+      }
     </div>
-  );
+  )
 }
 
 export default App;
