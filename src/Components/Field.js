@@ -1,20 +1,29 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Field = ({forms}) => {
     
-    const [awayTeam, setAwayTeam] = useState();
-    const [homeTeam, setHomeTeam] = useState();
+    const [awayTeam, setAwayTeam] = useState([]);
+    const [homeTeam, setHomeTeam] = useState([]);
 
-    function setPlayers(){
-        forms.Formations.HomeTeam.map((player) => {
-            console.log(player)
+    useEffect(() => {
+        //const homeTeamFormation = forms.HomeTeamFormation._attributes.Name;
+        //const awayTeamFormation = forms.AwayTeamFormation._attributes.Name;
+
+        forms.HomeTeamFormation.Row.forEach((row)=>{
+            setHomeTeam(homeTeam => [row,...homeTeam])
         })
-    }
+        
+        forms.AwayTeamFormation.Row.forEach((row)=>{
+            setAwayTeam(awayTeam => [row,...awayTeam])
+        })
+
+    }, []);
 
     return(
         <div className="field-pane">
-
-        {//setPlayers()
+        {//console.log(awayTeam)
+        }
+        {//console.log(homeTeam)
         }
             
         </div>

@@ -19,6 +19,7 @@ function App() {
         const parser = JSON.parse(
           convert.xml2json(res.data, {compact: true, spaces: 2})
         );
+        // Only need xml metadata for error handling.
         setData(parser.Formation);
       })
       .catch((err) => {
@@ -28,8 +29,10 @@ function App() {
 
   return(
     <div className="App">
-      {data == null
-        ? <img src={loading} alt='loading'/>
+      { // conditional rendering here.
+        // empty state ? loading : app components
+        data == null
+        ? <img className="loading-icon" src={loading} alt='loading'/>
         : <div>
             <Field forms={data.Formations}/>
             <SubBoard subs={data.Substitutes}/>
