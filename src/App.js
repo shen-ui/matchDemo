@@ -1,9 +1,12 @@
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import loading from './resources/loading.gif'
 import './App.css';
-import { useState, useEffect } from 'react';
+
+import Banner from './Components/Banner';
 import SubBoard from './Components/SubBoard';
 import Field from './Components/Field';
+import TeamBanner from './Components/TeamBanner';
 
 const convert = require("xml-js");
 
@@ -29,13 +32,18 @@ function App() {
 
   return(
     <div className="App">
-      { // conditional rendering here.
-        // empty state ? loading : app components
+      { // empty state ? loading : app components
         data == null
+        
         ? <img className="loading-icon" src={loading} alt='loading'/>
-        : <div>
-            <Field forms={data.Formations}/>
-            <SubBoard subs={data.Substitutes}/>
+        
+        : <div className="App-container">
+          <TeamBanner/>
+            <div className = "App-pane">
+              <Banner/>
+              <Field forms={data.Formations}/>
+              <SubBoard subs={data.Substitutes}/>
+            </div>
           </div>
       }
     </div>

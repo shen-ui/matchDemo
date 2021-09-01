@@ -1,16 +1,62 @@
 .App {
   background-color: #000;
   min-height: 100vh;
-  text-align: center;
-  font-size: calc(10px + 2vmin);
-
+  font-size: calc(10px + 1vmin);
+  width: 100vw;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  padding: 5%;
+}
+.loading-icon{
+  position: absolute;
+  top:50%;
+  left: 50%;
+}
+
+.App-container{
+  display: flex;
+  flex-direction: row;
+}
+.App-pane{
+  display:flex;
+  flex-direction: column;
+}
+.team-banner{
+  display: flex;
+  flex-direction: column;
 }
 
 .field-pane{
   background-image: url(resources/Field.png);
+  background-size: contain;
   background-repeat: no-repeat;
-  height:100vh;
-  width:100vw;
+  height:60vh;
+  width:45vw;
+}
+.sub-pane{
+  height: 45vh;
+  width:50vw;
+  display:flex;
+  flex-direction: column;
+}
+.sub-banner{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.sub-pane-container{
+  display:flex;
+  flex-direction: row;
+}
+
+.sub-pane .hometeam{
+  text-align: left;
+  width: 50%;
+  height:50vh;
+}
+.sub-pane .awayteam{
+  text-align: right;
+  width: 50%;
+  height:50vh;
 }
