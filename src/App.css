@@ -3,39 +3,87 @@
   min-height: 100vh;
   font-size: calc(10px + 1vmin);
   width: 100vw;
+  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  padding: 5%;
+
 }
 .loading-icon{
   position: absolute;
   top:50%;
   left: 50%;
 }
+.team-banner{
+  width:25vw;
+  height: 100vh;
+}
+.icon-container{
+  width: 15vw;
+  margin-left:12vw;
+  display:flex;
+  flex-direction: column;
+}
+
+.team-banner .icon-container img{
+  width: 10vw;
+  max-width: 180px;
+  margin: 2vh 0 10vh 10%;
+}
+
+header{
+
+  font-size: 3vw;
+  margin: .8vh 0 5vh 0;
+  text-align:center;
+  text-transform: uppercase;
+  height:6vw;
+}
+header .timestamp{
+  line-height: 0;
+  font-weight:normal;
+  font-size:12px;
+}
+header .title{
+  line-height: 0;
+}
 
 .App-container{
   display: flex;
   flex-direction: row;
+  max-width: 80vw;
+  max-height: 90vh;
 }
 .App-pane{
   display:flex;
   flex-direction: column;
+  max-width: 1600px;
 }
-.team-banner{
-  display: flex;
-  flex-direction: column;
+
+.components{
+  display:flex;
+  flex-direction: row;
 }
 
 .field-pane{
   background-image: url(resources/Field.png);
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  height:60vh;
-  width:45vw;
+  height:100%;
+  width:25vw;
+  max-height: 636px;
+  max-width: 428px;
+  min-height: 366px;
+  min-width: 228px;
+  left: 50%;
+  top: 50%;
 }
 .sub-pane{
-  height: 45vh;
-  width:50vw;
+  font-size: 1vh;
+  height: 100%;
+  width:30vw;
+  max-height: 636px;
+  max-width: 528px;
+
   display:flex;
   flex-direction: column;
 }
@@ -44,7 +92,6 @@
   flex-direction: row;
   margin: 0 auto;
 }
-
 .sub-pane-container{
   display:flex;
   flex-direction: row;
@@ -53,10 +100,12 @@
 .sub-pane .hometeam{
   text-align: left;
   width: 50%;
-  height:50vh;
 }
 .sub-pane .awayteam{
   text-align: right;
+  margin-left: 0px;
   width: 50%;
-  height:50vh;
+}
+.sub-pane ul{
+  margin: 15% 20% 15% 0%;
 }

@@ -24,6 +24,7 @@ function App() {
         );
         // Only need xml metadata for error handling.
         setData(parser.Formation);
+        console.log(parser)
       })
       .catch((err) => {
         console.log("error: ", err);
@@ -34,15 +35,15 @@ function App() {
     <div className="App">
       { // empty state ? loading : app components
         data == null
-        
         ? <img className="loading-icon" src={loading} alt='loading'/>
-        
         : <div className="App-container">
           <TeamBanner/>
             <div className = "App-pane">
-              <Banner/>
-              <Field forms={data.Formations}/>
-              <SubBoard subs={data.Substitutes}/>
+              <Banner timeStamp={data.Timestamp._text} location={data.Venue._text}/>
+              <div className="components">
+                <Field forms={data.Formations}/>
+                <SubBoard subs={data.Substitutes}/>
+              </div>
             </div>
           </div>
       }
