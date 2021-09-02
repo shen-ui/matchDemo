@@ -14,34 +14,39 @@
   left: 50%;
 }
 .team-banner{
-  width:25vw;
-  height: 100vh;
+  width:11vw;
+  height: 90vh;
 }
 .icon-container{
-  width: 15vw;
-  margin-left:12vw;
+  width: 80%;
+  height: 84%;
   display:flex;
   flex-direction: column;
 }
 
 .team-banner .icon-container img{
-  width: 10vw;
-  max-width: 180px;
-  margin: 2vh 0 10vh 10%;
+  left: 0;
+  width: 7vw;
+  min-width: 110px;
+  max-width: 130px;
+  padding-top: 5vh;
+  margin: 0 0 7vh 3vw;
+  align-content: right;
 }
 
 header{
-
-  font-size: 3vw;
-  margin: .8vh 0 5vh 0;
+  font-size: 5.5vh;
+  margin: 0vh 8vw 5vh 0;
   text-align:center;
   text-transform: uppercase;
-  height:6vw;
+  height:12vh;
+  max-height:148px;
 }
 header .timestamp{
+  margin-right:8vw;
   line-height: 0;
   font-weight:normal;
-  font-size:12px;
+  font-size:1.5vh;
 }
 header .title{
   line-height: 0;
@@ -50,13 +55,16 @@ header .title{
 .App-container{
   display: flex;
   flex-direction: row;
-  max-width: 80vw;
-  max-height: 90vh;
+  justify-content: center;
+  width:100vw;
+
 }
 .App-pane{
   display:flex;
   flex-direction: column;
   max-width: 1600px;
+  max-height: 900px;
+  width:auto;
 }
 
 .components{
@@ -69,28 +77,23 @@ header .title{
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height:100%;
-  width:25vw;
-  max-height: 636px;
-  max-width: 428px;
-  min-height: 366px;
-  min-width: 228px;
-  left: 50%;
-  top: 50%;
+  width:17.5vw;
+  max-height: 690px;
+  max-width: 365px;
+  min-height: 480px;
+  min-width: 348px;
 }
+
 .sub-pane{
-  font-size: 1vh;
+  font-size: 14px;
   height: 100%;
   width:30vw;
   max-height: 636px;
   max-width: 528px;
-
+  margin-left:3vw;
+  
   display:flex;
   flex-direction: column;
-}
-.sub-banner{
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
 }
 .sub-pane-container{
   display:flex;
@@ -99,13 +102,43 @@ header .title{
 
 .sub-pane .hometeam{
   text-align: left;
-  width: 50%;
+  width: 100%;
+
 }
 .sub-pane .awayteam{
   text-align: right;
-  margin-left: 0px;
-  width: 50%;
+  margin-right: 0px;
+  width: 100%;
 }
-.sub-pane ul{
-  margin: 15% 20% 15% 0%;
+.sub-pane .home-sub-player{
+  display:flex;
+  flex-direction: row;
+  margin-top:1vh;
+}
+.sub-pane ul .player-number{
+  width: 1vw;
+}
+.sub-pane .away-sub-player{
+  display:flex;
+  flex-direction: row-reverse;
+}
+.sub-pane ul .player-number{
+  margin: 0 1vw 0 1vw;
+}
+
+.sub-banner{
+  display: flex;
+  flex-direction: row;
+  margin-top:1vh;
+  justify-content: space-between;
+  margin-left:55px;
+  margin-right:2%;
+  font-weight: 700;
+}
+.banner-home-icon-container{
+  width: 61px;
+}
+.banner-away-icon-container{
+  width: 61px;
+
 }

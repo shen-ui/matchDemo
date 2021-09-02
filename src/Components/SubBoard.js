@@ -21,9 +21,13 @@ const SubBoard = ({subs}) => {
         <div className="sub-pane">
             {/* Game Banner */}
             <span className="sub-banner">
-                <img className="hometeam-icon" src={Team1Icon} type="svg"/>
-                SUBSTITUTES
-                <img className="awayteam-icon" src={Team2Icon} type="svg"/>
+                <div className="banner-icon-container">
+                    <img className="hometeam-icon" src={Team1Icon} type="svg"/>
+                </div>
+                <p>SUBSTITUTES</p>
+                <div className="banner-icon-container">
+                    <img className="awayteam-icon" src={Team2Icon} type="svg"/>
+                </div>
             </span>
 
             {/* Substitute Panel*/}
@@ -33,9 +37,10 @@ const SubBoard = ({subs}) => {
                     homeSubs.map((sub, index)=>{
                         return(
                             <span className="home-sub-player" key={index}>
-                                <ul className="sub-player">
-                                    {sub._attributes.Number}
-                                    {sub._attributes.Name}
+                                <ul className="home-sub-player">
+                                    <div className="player-number">{sub._attributes.Number}</div>
+                                     <div>{sub._attributes.Name}</div>
+
                                 </ul>
                             </span>
                         )
@@ -48,9 +53,9 @@ const SubBoard = ({subs}) => {
                     awaySubs.map((sub, index)=>{
                         return(
                             <span className="away-sub-player" key={index}>
-                                <ul>
-                                    {sub._attributes.Name}
-                                    {sub._attributes.Number}
+                                <ul className="away-sub-player">
+                                    <div className="player-number">{sub._attributes.Number}</div>
+                                     <div>{sub._attributes.Name}</div>
                                 </ul>
                             </span>
                         )
