@@ -103,12 +103,13 @@ header .title{
 .sub-pane .hometeam{
   text-align: left;
   width: 100%;
+  margin-left: -55px;
 
 }
 .sub-pane .awayteam{
   text-align: right;
-  margin-right: 0px;
   width: 100%;
+  margin-right: -7px;
 }
 .sub-pane .home-sub-player{
   display:flex;
@@ -123,7 +124,7 @@ header .title{
   flex-direction: row-reverse;
 }
 .sub-pane ul .player-number{
-  margin: 0 1vw 0 1vw;
+  margin: 0 1.5vw 0 1.5vw;
 }
 
 .sub-banner{
@@ -131,14 +132,18 @@ header .title{
   flex-direction: row;
   margin-top:1vh;
   justify-content: space-between;
-  margin-left:55px;
+
   margin-right:2%;
   font-weight: 700;
 }
 .banner-home-icon-container{
-  width: 61px;
+  width: 70px;
 }
 .banner-away-icon-container{
   width: 61px;
+
+}
+
+@media (max-device-width:982px){
 
 }
