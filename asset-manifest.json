@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/matchDemo/static/css/main.5fae0db4.chunk.css",
-    "main.js": "/matchDemo/static/js/main.07f9160f.chunk.js",
-    "main.js.map": "/matchDemo/static/js/main.07f9160f.chunk.js.map",
-    "runtime-main.js": "/matchDemo/static/js/runtime-main.6a8ac698.js",
-    "runtime-main.js.map": "/matchDemo/static/js/runtime-main.6a8ac698.js.map",
-    "static/js/2.6cb02f58.chunk.js": "/matchDemo/static/js/2.6cb02f58.chunk.js",
-    "static/js/2.6cb02f58.chunk.js.map": "/matchDemo/static/js/2.6cb02f58.chunk.js.map",
-    "static/js/3.741fce03.chunk.js": "/matchDemo/static/js/3.741fce03.chunk.js",
-    "static/js/3.741fce03.chunk.js.map": "/matchDemo/static/js/3.741fce03.chunk.js.map",
+    "main.css": "/matchDemo/static/css/main.0744c2e9.chunk.css",
+    "main.js": "/matchDemo/static/js/main.5daec463.chunk.js",
+    "main.js.map": "/matchDemo/static/js/main.5daec463.chunk.js.map",
+    "runtime-main.js": "/matchDemo/static/js/runtime-main.a19bf4e6.js",
+    "runtime-main.js.map": "/matchDemo/static/js/runtime-main.a19bf4e6.js.map",
+    "static/js/2.8568f4b2.chunk.js": "/matchDemo/static/js/2.8568f4b2.chunk.js",
+    "static/js/2.8568f4b2.chunk.js.map": "/matchDemo/static/js/2.8568f4b2.chunk.js.map",
+    "static/js/3.0509bab2.chunk.js": "/matchDemo/static/js/3.0509bab2.chunk.js",
+    "static/js/3.0509bab2.chunk.js.map": "/matchDemo/static/js/3.0509bab2.chunk.js.map",
     "index.html": "/matchDemo/index.html",
-    "static/css/main.5fae0db4.chunk.css.map": "/matchDemo/static/css/main.5fae0db4.chunk.css.map",
-    "static/js/2.6cb02f58.chunk.js.LICENSE.txt": "/matchDemo/static/js/2.6cb02f58.chunk.js.LICENSE.txt",
+    "static/css/main.0744c2e9.chunk.css.map": "/matchDemo/static/css/main.0744c2e9.chunk.css.map",
+    "static/js/2.8568f4b2.chunk.js.LICENSE.txt": "/matchDemo/static/js/2.8568f4b2.chunk.js.LICENSE.txt",
     "static/media/App.css": "/matchDemo/static/media/Field.dd48bfb9.png",
     "static/media/LeagueIcon.25ba238b.svg": "/matchDemo/static/media/LeagueIcon.25ba238b.svg",
     "static/media/Team1Icon.d27e5db9.svg": "/matchDemo/static/media/Team1Icon.d27e5db9.svg",
@@ -19,9 +19,9 @@
     "static/media/loading.646e6de6.gif": "/matchDemo/static/media/loading.646e6de6.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.6a8ac698.js",
-    "static/js/2.6cb02f58.chunk.js",
-    "static/css/main.5fae0db4.chunk.css",
-    "static/js/main.07f9160f.chunk.js"
+    "static/js/runtime-main.a19bf4e6.js",
+    "static/js/2.8568f4b2.chunk.js",
+    "static/css/main.0744c2e9.chunk.css",
+    "static/js/main.5daec463.chunk.js"
   ]
 }
