@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/matchDemo/static/css/main.caf5ef6c.chunk.css",
-    "main.js": "/matchDemo/static/js/main.cce418e4.chunk.js",
-    "main.js.map": "/matchDemo/static/js/main.cce418e4.chunk.js.map",
+    "main.css": "/matchDemo/static/css/main.5fae0db4.chunk.css",
+    "main.js": "/matchDemo/static/js/main.07f9160f.chunk.js",
+    "main.js.map": "/matchDemo/static/js/main.07f9160f.chunk.js.map",
     "runtime-main.js": "/matchDemo/static/js/runtime-main.6a8ac698.js",
     "runtime-main.js.map": "/matchDemo/static/js/runtime-main.6a8ac698.js.map",
     "static/js/2.6cb02f58.chunk.js": "/matchDemo/static/js/2.6cb02f58.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.741fce03.chunk.js": "/matchDemo/static/js/3.741fce03.chunk.js",
     "static/js/3.741fce03.chunk.js.map": "/matchDemo/static/js/3.741fce03.chunk.js.map",
     "index.html": "/matchDemo/index.html",
-    "static/css/main.caf5ef6c.chunk.css.map": "/matchDemo/static/css/main.caf5ef6c.chunk.css.map",
+    "static/css/main.5fae0db4.chunk.css.map": "/matchDemo/static/css/main.5fae0db4.chunk.css.map",
     "static/js/2.6cb02f58.chunk.js.LICENSE.txt": "/matchDemo/static/js/2.6cb02f58.chunk.js.LICENSE.txt",
     "static/media/App.css": "/matchDemo/static/media/Field.dd48bfb9.png",
     "static/media/LeagueIcon.25ba238b.svg": "/matchDemo/static/media/LeagueIcon.25ba238b.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.6a8ac698.js",
     "static/js/2.6cb02f58.chunk.js",
-    "static/css/main.caf5ef6c.chunk.css",
-    "static/js/main.cce418e4.chunk.js"
+    "static/css/main.5fae0db4.chunk.css",
+    "static/js/main.07f9160f.chunk.js"
   ]
 }
