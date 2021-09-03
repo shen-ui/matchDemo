@@ -21,43 +21,36 @@ const SubBoard = ({subs}) => {
         <div className="sub-pane">
             {/* Game Banner */}
             <span className="sub-banner">
-                <div className="banner-icon-container">
-                    <img className="hometeam-icon" src={Team1Icon} type="svg"/>
-                </div>
-                <p>SUBSTITUTES</p>
-                <div className="banner-icon-container">
-                    <img className="awayteam-icon" src={Team2Icon} type="svg"/>
-                </div>
+                    <img src={Team2Icon} type="svg"/>
+                <span>SUBSTITUTES</span>
+                    <img src={Team1Icon} type="svg"/>
             </span>
 
             {/* Substitute Panel*/}
             <div className="sub-pane-container">
-                <div className="hometeam">
+                <div className="team">
                 {// set up home team: left side of panel
                     homeSubs.map((sub, index)=>{
                         return(
-                            <span className="home-sub-player" key={index}>
-                                <ul className="home-sub-player">
-                                    <div className="player-number">{sub._attributes.Number}</div>
-                                     <div>{sub._attributes.Name}</div>
 
-                                </ul>
-                            </span>
+                            <ul className="home-sub-player" key={index}>
+                            <div className="player-number">{sub._attributes.Number}</div>
+                            <div className="player-name">{sub._attributes.Name}</div>
+                    </ul>
+
                         )
                     })
                 }
                 </div>
                 
-                <div className="awayteam">
+                <div className="team">
                 {// set up away team: right side of panel
                     awaySubs.map((sub, index)=>{
                         return(
-                            <span className="away-sub-player" key={index}>
-                                <ul className="away-sub-player">
-                                    <div className="player-number">{sub._attributes.Number}</div>
-                                     <div>{sub._attributes.Name}</div>
+                                <ul className="away-sub-player" key={index}>
+                                        <div className="player-number">{sub._attributes.Number}</div>
+                                        <div className="player-name">{sub._attributes.Name}</div>
                                 </ul>
-                            </span>
                         )
                     })
                 }
