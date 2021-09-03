@@ -1,3 +1,5 @@
+import LeagueIcon from '../resources/LeagueIcon.svg';
+
 const Banner = ({timeStamp, location}) => {
     function dateConfig(){
         let merid = '';
@@ -5,11 +7,9 @@ const Banner = ({timeStamp, location}) => {
         
         if(hour >= 12){
             hour -= 12;
-            merid = "PM"
+            merid = "PM";
         }
-        else{
-            merid = 'AM'
-        }
+        else merid = 'AM';
         
         let time = 
             timeStamp.slice(5,7) + "/" + 
@@ -25,8 +25,13 @@ const Banner = ({timeStamp, location}) => {
 
     return(
         <header>
-            <p className="title">MATCH SUMMARY</p>
-            <p className="timestamp">{dateConfig()} {location}</p>
+            <img className="leagueIcon" src={LeagueIcon}/>
+                <p className="title">
+                    MATCH SUMMARY
+                    <p className="timestamp">
+                        {dateConfig()}{location}
+                    </p>
+                </p>
         </header>
     )
 }

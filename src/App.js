@@ -37,14 +37,12 @@ function App() {
         data == null
         ? <img className="loading-icon" src={loading} alt='loading'/>
         : <div className="App-container">
-          <TeamBanner/>
-            <div className = "App-pane">
               <Banner timeStamp={data.Timestamp._text} location={data.Venue._text}/>
               <div className="components">
+                <TeamBanner/>
                 <Field forms={data.Formations}/>
                 <SubBoard subs={data.Substitutes}/>
               </div>
-            </div>
           </div>
       }
     </div>
