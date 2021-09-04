@@ -67,8 +67,8 @@ header .timestamp{
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: 0 auto;
-  min-height: 500px;
-  min-width: 360px;
+  min-height: 520px;
+  min-width: 370px;
   max-height: 535px;
   max-width: 400px;
 }
@@ -161,8 +161,8 @@ header .timestamp{
     flex-direction: column;
   }
   .field-pane{
-    margin: 5vh auto;
-  
+    margin: 5vh auto 0 auto;
+    
   }
   /* style for substitute panel*/
   .sub-pane{
