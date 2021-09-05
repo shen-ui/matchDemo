@@ -1,0 +1,22 @@
+.field-pane{
+    background-image: url(../resources/Field.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 2% auto;
+    min-height:0px;
+    min-width: 395px;
+
+    display:flex;
+    flex-direction: column;
+  }
+
+  .field-pane .field-home-team{
+    position:relative;
+    width:10% auto;
+    
+  }
+  .field-pane .field-away-team{
+    position:relative;
+
+    width:auto;
+  }

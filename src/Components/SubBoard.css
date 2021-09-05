@@ -1,0 +1,76 @@
+
+.sub-pane{
+    font-size: 12px;
+    min-width: 320px;
+    width:100%;
+    height: 100%;
+    margin: 1vh 3vw 0 3vw;
+    display:flex;
+    flex-direction: column;
+  }
+  .sub-pane-container{
+    display:flex;
+    flex-direction: row;
+  }
+  /*Banner for sub-pane*/
+  .sub-banner{
+    display:flex;
+    vertical-align: auto;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 14px;
+
+  }
+  .sub-banner span{
+    padding:15px;
+  }
+  .sub-banner img{
+    vertical-align:text-bottom;
+    width: 72px;
+    height: 72px;
+  }
+  
+  .sub-pane .team{
+    width: 50%;
+  }
+  .sub-pane .home-sub-player{
+    margin:0 0 24% 0;
+    display:flex;
+    flex-direction: row;
+    padding:0; 
+    /* by default, the text is verical align mid
+       needs to be overrided.  
+    */
+  }
+  .sub-pane .away-sub-player{
+    margin:0 0 24% 0;
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  .sub-pane .away-sub-player .player-name{
+    position: relative;
+    margin-right: 2vw;
+  }
+  .sub-pane .home-sub-player .player-name{
+    position:absolute;
+    margin-left: 3vw;
+  }
+
+  @media (max-width:632px){
+    .sub-pane{
+      margin: 1vh;
+      max-width:100%;
+    }
+    .sub-pane .team ul{
+      margin: 0 12.5vw 17% 12.5vw;
+    }
+    .sub-pane .home-sub-player .player-name{
+      margin-left: 5vw;
+  
+    }
+    .sub-banner img{
+      height:50px;
+      width: 50px;
+    }
+  
+  }

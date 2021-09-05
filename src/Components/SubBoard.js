@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Team1Icon from '../resources/Team1Icon.svg'
 import Team2Icon from '../resources/Team2Icon.svg'
+import './SubBoard.css'
 const SubBoard = ({subs}) => {
 
     const[homeSubs, setHomeSubs] = useState([]);
@@ -15,15 +16,15 @@ const SubBoard = ({subs}) => {
             setAwaySubs(awaySubs => [player,...awaySubs])
         })
 
-    }, [])
+    }, [subs.HomeTeam.Player, subs.AwayTeam.Player])
 
     return(
         <div className="sub-pane">
             {/* Game Banner */}
             <span className="sub-banner">
-                    <img src={Team2Icon} type="svg"/>
-                <span>SUBSTITUTES</span>
-                    <img src={Team1Icon} type="svg"/>
+                    <img src={Team2Icon} type="svg" alt="Home"/>
+                    SUBSTITUTES
+                    <img src={Team1Icon} type="svg" alt="Away"/>
             </span>
 
             {/* Substitute Panel*/}

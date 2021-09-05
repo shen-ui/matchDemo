@@ -1,6 +1,6 @@
 import LeagueIcon from '../resources/LeagueIcon.svg';
 
-const Banner = ({timeStamp, location}) => {
+const Header = ({timeStamp, location}) => {
     function dateConfig(){
         let merid = '';
         let hour = timeStamp.slice(11,13);
@@ -17,7 +17,7 @@ const Banner = ({timeStamp, location}) => {
             timeStamp.slice(0,4)  + "\t" +
             hour + ":" + 
             timeStamp.slice(14,16) +  
-            merid + "\t"
+            merid 
 
 
         return(time);    
@@ -25,7 +25,7 @@ const Banner = ({timeStamp, location}) => {
 
     return(
         <header>
-            <img className="leagueIcon" src={LeagueIcon}/>
+            <img src={LeagueIcon} alt="League"/>
                 <p className="title">
                     MATCH SUMMARY
                     <p className="timestamp">
@@ -35,4 +35,4 @@ const Banner = ({timeStamp, location}) => {
         </header>
     )
 }
-export default Banner;
+export default Header;

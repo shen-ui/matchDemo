@@ -9,7 +9,8 @@
 }
 .loading-icon{
   position: absolute;
-  margin: 0 auto;
+  left: 45%;
+  top: 40%;
 }
 
 /* Header CSS */
@@ -20,18 +21,19 @@ header{
   text-align:center;
   text-transform: uppercase;
   width:100%;
-  margin: 2vh 0 3vh 0vw;
-  max-height:120px;
+  margin: .5em auto;
+  height:100px;
 }
 
 header .title{
   width: 100%;
-  margin-right: 12%;
-  margin-top:1%;
+  margin:0% 13% 0 0;
  
 }
 header .timestamp{
+  line-height: 0;
   font-size: 32%;
+  white-space: pre;
 }
 
 /*CSS for all containers*/
@@ -40,94 +42,14 @@ header .timestamp{
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 68vw;
+  width: max-content;
+  height: max-content;
 }
 .components{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-  height: max-content;
-}
-
-/*CSS for components*/
-.team-banner{
-  min-width: 190px;
-}
-.team-banner-container{
-  display: flex;
-  max-width:150px;
-  flex-direction: column;
-  justify-content:space-around;
-  height: 59vh;
-  margin-right:20%;
-}
-
-.field-pane{
-  background-image: url(resources/Field.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  min-height: 520px;
-  min-width: 370px;
-  max-height: 535px;
-  max-width: 400px;
-}
-.sub-pane{
-  font-size: 12px;
-  max-width:24vw;
-  min-width: 270px;
-  margin: 1vh 0 0 4vw;
-  display:flex;
-  flex-direction: column;
-  flex-grow:1;
-}
-.sub-pane-container{
-  display:flex;
-  flex-direction: row;
-}
-/*Banner for sub-pane*/
-.sub-banner{
-  display:flex;
-  vertical-align: middle;
-  position:relative;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 14px;
-  height:12%;
-}
-.sub-banner span{
-  padding:15px;
-}
-.sub-banner img{
-  vertical-align:text-bottom;
-  width: 60px;
-  height: 60px;
-}
-
-.sub-pane .team{
-  width: 50%;
-}
-.sub-pane .home-sub-player{
-  margin:10% 0 3.5vh 0;
-  display:flex;
-  flex-direction: row;
-  padding:0; 
-  /* by default, the text is verical align mid
-     needs to be overrided.  
-  */
-}
-.sub-pane .away-sub-player{
-  margin:10% 0 3.5vh 0;
-  display:flex;
-  flex-direction: row-reverse;
-}
-.sub-pane .away-sub-player .player-name{
-  position: relative;
-  margin-right: 2vw;
-}
-.sub-pane .home-sub-player .player-name{
-  position:absolute;
-  margin-left: 3vw;
+  height: 32em;
 }
 /* tablet size */
 @media(max-width:1080px){
@@ -144,7 +66,7 @@ header .timestamp{
   }
   .sub-pane{
     margin: 1;
-    margin-top: 8.5%;
+    margin-top: 9%;
   }
 
   .team-banner{
@@ -159,32 +81,14 @@ header .timestamp{
   }
   .components{
     flex-direction: column;
-  }
-  .field-pane{
-    margin: 5vh auto 0 auto;
-    
-  }
-  /* style for substitute panel*/
-  .sub-pane{
-    margin: 0;
-    max-width:100%;
-  }
-  .sub-pane .team ul{
-    margin: 0 12.5vw 17% 12.5vw;
-  }
-  .sub-pane .home-sub-player .player-name{
-    margin-left: 5vw;
-
-  }
-  .sub-banner img{
-    height:50px;
-    width: 50px;
+    width:fit-content;
+    margin: 5vh auto;
   }
 
   /* remove these from dom */
   header {
-    margin-bottom: 10vh;
     display:none;
+    margin-bottom: 10vh;
   }
   .team-banner{
     display:none;

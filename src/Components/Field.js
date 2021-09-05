@@ -1,12 +1,14 @@
 import { useState,useEffect } from "react";
+import Team1Icon from '../resources/Team1Icon.svg'
+import Team2Icon from '../resources/Team2Icon.svg'
+import './Field.css'
 import '../resources/formations.css'
 
 const Field = ({forms}) => {
     
     const [awayTeam, setAwayTeam] = useState([]);
     const [homeTeam, setHomeTeam] = useState([]);
-    const [date, setDate] = useState('');
-    const [location, setLocation] = useState('');
+
 
     useEffect(() => {
         //const homeTeamFormation = forms.HomeTeamFormation._attributes.Name;
@@ -19,15 +21,24 @@ const Field = ({forms}) => {
             setAwayTeam(awayTeam => [row,...awayTeam])
         })
 
-    }, []);
+    }, [forms.HomeTeamFormation.Row,forms.AwayTeamFormation.Row]);
 
     return(
         <div className="field-pane">
-        {//console.log(awayTeam)
+                <div className="field-home-team">
+                    <img src={Team1Icon} alt="team icon"/>
+                </div>
+                <div className="field-away-team">
+                    <img src={Team2Icon} alt="team icon"/>
+                </div>
+        {console.log(homeTeam.length)
         }
-        {//console.log(homeTeam)
+        {
+            homeTeam.map((row)=>{
+                //do something with row
+
+            })
         }
-            
         </div>
     )
 }

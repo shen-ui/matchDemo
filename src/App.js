@@ -3,7 +3,7 @@ import axios from 'axios';
 import loading from './resources/loading.gif'
 import './App.css';
 
-import Banner from './Components/Banner';
+import Header from './Components/Header';
 import SubBoard from './Components/SubBoard';
 import Field from './Components/Field';
 import TeamBanner from './Components/TeamBanner';
@@ -24,7 +24,7 @@ function App() {
         );
         // Only need xml metadata for error handling.
         setData(parser.Formation);
-        console.log(parser)
+        //console.log(parser)
       })
       .catch((err) => {
         console.log("error: ", err);
@@ -37,7 +37,7 @@ function App() {
         data == null
         ? <img className="loading-icon" src={loading} alt='loading'/>
         : <div className="App-container">
-              <Banner timeStamp={data.Timestamp._text} location={data.Venue._text}/>
+              <Header timeStamp={data.Timestamp._text} location={data.Venue._text}/>
               <div className="components">
                 <TeamBanner/>
                 <Field forms={data.Formations}/>
