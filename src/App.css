@@ -4,8 +4,9 @@
   min-height: 100vh;
   min-width: 100vw;
   font-size: calc(10px + 1vmin);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
   color: white;
+
 }
 .loading-icon{
   position: absolute;
@@ -17,9 +18,10 @@
 header{
   justify-content: space-between;
   display: inline-flex;
-  font-size: 5.5vh;
+  font-size: 54px;
   text-align:center;
   text-transform: uppercase;
+  object-fit: contain;
   width:100%;
   margin: .5em auto;
   height:100px;
@@ -27,7 +29,7 @@ header{
 
 header .title{
   width: 100%;
-  margin:0% 13% 0 0;
+  margin:0 13% 0 0;
  
 }
 header .timestamp{
@@ -56,7 +58,6 @@ header .timestamp{
   .App-container{
     min-width:max-content;
     min-height: 100vh;
-
   }
   header{
     font-size: xxx-large;
@@ -73,18 +74,13 @@ header .timestamp{
     display:none;
   }
 }
-
 /* mobile */
-@media (max-width:632px){
-  .App-container{
-    margin:0 auto;
-  }
+@media (max-width:832px){
   .components{
     flex-direction: column;
-    width:fit-content;
     margin: 5vh auto;
+    height: fit-content;
   }
-
   /* remove these from dom */
   header {
     display:none;
