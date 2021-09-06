@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Team1Icon from '../resources/Team1Icon.svg'
 import Team2Icon from '../resources/Team2Icon.svg'
 import './SubBoard.css'
+
+
 const SubBoard = ({subs}) => {
 
     const[homeSubs, setHomeSubs] = useState([]);
@@ -18,13 +20,32 @@ const SubBoard = ({subs}) => {
 
     }, [subs.HomeTeam.Player, subs.AwayTeam.Player])
 
-    function setCards(sub){   
-        if(sub._attributes.RedCards){
-            // display red card
+    function setCards(sub){
+        console.log(sub._attributes.Name + " : " + sub._attributes.YellowCards);
+        if(sub._attributes.RedCards>0){
+            return (
+                <div className='yellowcard-3'/>
+            )
         }
-        else if(sub._attributes.YellowCards>=1){
-            const fouls = sub._attributes.YellowCard;
-            // display yellow cards accordingly
+        // eslint-disable-next-line
+        else if(sub._attributes.YellowCards==1){
+            return(
+                    <div className='yellowcard-1'/>
+                )
+        }
+        // eslint-disable-next-line
+        else if(sub._attributes.YellowCards==2){
+            console.log("2");
+            return(
+                <>
+                    <div className='yellowcard-1'/>
+                    <div className='yellowcard-2'/>
+                </>
+                )
+        }
+        else{
+            //console.log("none")
+            return;
         }
         
     }
@@ -41,15 +62,16 @@ const SubBoard = ({subs}) => {
             <div className="sub-pane-container">
                 <div className="team">
                 {// set up home team: left side of panel
-                    homeSubs.map((sub, index)=>{
-                        setCards(sub);
+                    homeSubs.map((sub, index)=> {
+
                         return(
                             <ul className="home-sub-player" key={index}>
                                 <div className="player-number">{sub._attributes.Number}</div>
                                 <div className="player-name">{sub._attributes.Name}
-                                    <div className="home-cards"> 
-                                        <div className="yellowcard-2"/>
-                                        <div className="yellowcard-1"/>  
+                                <div className="home-cards"> 
+                                    {
+                                        setCards(sub)
+                                    }
                                     </div>
                                 </div>
                             </ul>
@@ -62,16 +84,15 @@ const SubBoard = ({subs}) => {
                 <div className="team">
                 {// set up away team: right side of panel
                     awaySubs.map((sub, index)=>{
-                        setCards(sub);
                         return(
                             <ul className="away-sub-player" key={index}>
                                 <div className="player-number">{sub._attributes.Number}</div>
                                 <div className="player-name">
                                 <div className="away-cards"> 
-                                    <div className="redcard"/>    
-                                        <div className="yellowcard-1"/>                           
-                                        <div className="yellowcard-2"/>
-                                    </div>
+                                    {
+                                        setCards(sub)
+                                    }
+                                </div>
                                     {sub._attributes.Name}
                                 </div>
                             </ul>

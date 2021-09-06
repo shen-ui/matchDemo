@@ -76,20 +76,29 @@
     display: inherit;
     align-items: center;
   }
+
+
   .yellowcard-1 {
-    margin: 0 2px 0 2px;
+    margin: 0 10px 0 2px;
     height: 20px;
     width: 8px;
-
-    background: rgba(255, 255, 0, 0);
+    background: rgb(255, 196, 0);
   }
   .yellowcard-2 {
     margin: 2px;
     height:15px;
     width: 8px;
     margin: auto;
-    background: rgba(255, 255, 0, 0);
-  }
+    background: rgb(255, 196, 0);
+  } 
+  .yellowcard-3 {
+    margin: 2px;
+    height:15px;
+    width: 8px;
+    margin: auto;
+    background: rgb(237, 7, 7);
+  } 
+
   @media (max-width:768px){
     .sub-pane{
       margin: 0;

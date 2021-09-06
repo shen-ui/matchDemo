@@ -6,7 +6,7 @@ const Header = ({timeStamp, location}) => {
         let hour = timeStamp.slice(11,13);
         let day = timeStamp.slice(5,7);
         //remove 0 if day contains 0
-        if(day.slice(0,1) == '0'){
+        if(day.slice(0,1) === '0'){
            day = day.slice(1,2);
         }
         //set up meridian and hour

@@ -1,5 +1,34 @@
 .player{
     font-size: xx-small;
+    display:flex;
     text-align: center;
-    width: 14%;
+
 }
+.cards{
+    height:100%;
+}
+.player img{
+    height:30px;
+    width: 30px;
+}
+.player .yellowcard-1 {
+    margin: 0 1px 0 1px;
+    float:right;
+    height: 7px;
+    width: 5px;
+    background: rgb(255, 196, 0);
+  }
+  .player  .yellowcard-2 {
+    margin: 2px;
+    height:2px;
+    width: 2px;
+    margin: auto;
+    background: rgb(255, 196, 0);
+  } 
+  .player  .yellowcard-3 {
+    margin: 2px;
+    height:15px;
+    width: 8px;
+    margin: auto;
+    background: rgb(237, 7, 7);
+  } 

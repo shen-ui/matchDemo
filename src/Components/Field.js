@@ -64,7 +64,7 @@ const Field = ({forms}) => {
 
             </div>            
             <div className="field-home-icon">
-                 <img src={Team2Icon}/>
+                 <img src={Team2Icon}  alt="icon"/>
             </div>
             <div className="field-away-team">
                 {    // Render Away Team
@@ -80,7 +80,7 @@ const Field = ({forms}) => {
                 }
             </div>
             <div className="field-away-icon">
-                 <img src={Team1Icon}/>
+                 <img src={Team1Icon} alt="icon"/>
                 </div>
         </div>
     )

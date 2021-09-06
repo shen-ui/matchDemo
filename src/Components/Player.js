@@ -2,13 +2,39 @@ import PlayerIcon from '../resources/PlayerIcon.svg'
 import './Player.css'
 
 const Player = ({attributes, imageURL, index}) => {
-    //imageURL is empty for now
+    function setCards(sub){
+        console.log(sub.Name +" yellow" + " : " + sub.YellowCards);
+        
+        if(sub.RedCards>0){
+            return <div className='yellowcard-3'/>
+        }
+        // eslint-disable-next-line
+        else if(sub.YellowCards==1){
+            return <div className='yellowcard-1'/>
+        }
+        // eslint-disable-next-line
+        else if(sub.YellowCards==2){
+            console.log("2");
+            return(
+                <>
+                    <div className='yellowcard-1'/>
+                    <div className='yellowcard-2'/>
+                </>
+                )
+        }
+        else return;
+        
+    }
     return(
         <div className="player"
              key={index}
         >
             <div className="player-container">
-                <img className="player-icon" src={PlayerIcon}/>
+                    {
+                        setCards(attributes)
+                    }
+
+                <img className="player-icon" src={PlayerIcon} alt="player icon"/>
                 <div>{attributes.Name}</div>
             </div>
         </div>
