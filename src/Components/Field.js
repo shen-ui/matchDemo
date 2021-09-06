@@ -3,7 +3,6 @@ import Player from './Player'
 import Team1Icon from '../resources/Team1Icon.svg'
 import Team2Icon from '../resources/Team2Icon.svg'
 import './Field.css'
-import '../resources/formations.css'
 
 const Field = ({forms}) => {
     
@@ -12,8 +11,6 @@ const Field = ({forms}) => {
 
 
     useEffect(() => {
-        //const homeTeamFormation = forms.HomeTeamFormation._attributes.Name;
-        //const awayTeamFormation = forms.AwayTeamFormation._attributes.Name;
 
         forms.HomeTeamFormation.Row.forEach((row)=>{
             setHomeTeam(homeTeam => [row,...homeTeam])
@@ -36,7 +33,6 @@ const Field = ({forms}) => {
         }
         else{
             return row.Player.map((player) => {
-
                 return (
                     <Player 
                         attributes={player._attributes} 
@@ -51,6 +47,7 @@ const Field = ({forms}) => {
     };
 
     return(
+        
         <div className="field-pane">
             <div className="field-home-team">
                 {   //render Home Team
@@ -64,6 +61,10 @@ const Field = ({forms}) => {
                         )    
                     })
                 }
+
+            </div>            
+            <div className="field-home-icon">
+                 <img src={Team2Icon}/>
             </div>
             <div className="field-away-team">
                 {    // Render Away Team
@@ -78,6 +79,9 @@ const Field = ({forms}) => {
                     })
                 }
             </div>
+            <div className="field-away-icon">
+                 <img src={Team1Icon}/>
+                </div>
         </div>
     )
 }

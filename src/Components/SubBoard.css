@@ -1,10 +1,11 @@
 .sub-pane{
     font-size: 12px;
-    min-width: 320px;
-    width:100%;
+    max-width: 800px;
+    width:40vw;
     display:flex;
-    margin: 6vh 4vw 5vh;
+    margin: 6vh 5vw 5vh;
     flex-direction: column;
+    flex-grow: 0;
   }
   .sub-pane-container{
     display:flex;
@@ -24,43 +25,41 @@
   }
   .sub-banner img{
     vertical-align:text-bottom;
-    width: 72px;
-    height: 72px;
+    height: 6vh;
   }
   
   /* inner substitution board*/
   .sub-pane .team{
     width: 50%;
-
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   .sub-pane .home-sub-player{
-    margin:24px 0 0 0;
+
     display:flex;
     flex-direction: row;
-    height: 22px;
     align-items:center;
-
     padding:0; 
     /* by default, the text is verical align mid
        needs to be overrided.  
     */
   }
   .sub-pane .away-sub-player{
-    margin:24px 0 0 0;
+
     display:flex;
     flex-direction: row-reverse;
-    height: 22px;
     align-items:center;
   }
   .sub-pane .home-sub-player .player-name{
     position: absolute;
-    margin-left: 3vw;
+    margin-left: 3em;
     align-items: center;
     display:inherit;
   }
   .sub-pane .away-sub-player .player-name{
     position: absolute;
-    margin-right: 3vw;
+    margin-right: 4em;
     align-items: center;
     display: inherit;
   }
@@ -91,11 +90,10 @@
     margin: auto;
     background: rgba(255, 255, 0, 0);
   }
-
-  @media (max-width:832px){
+  @media (max-width:768px){
     .sub-pane{
       margin: 0;
-      max-width:100%;
+      width: 100vw;
     }
     .sub-pane .team ul{
       margin: 0 25% 15% 25%;
@@ -103,15 +101,9 @@
     }
     .sub-pane .home-sub-player .player-name{
       margin-left: 2em;
-  
     }
     .sub-pane .away-sub-player .player-name{
       margin-right: 2em;
-  
-    }
-    .sub-banner img{
-      height:50px;
-      width: 50px;
     }
     .yellowcard-1{
       display:none;

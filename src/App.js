@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(' https://static.yinzcam.com/interviews/web/api/match1.xml', {
+      .get(' https://static.yinzcam.com/interviews/web/api/match3.xml', {
         'Content-Type': "applications/xml"
       })
       .then((res) => {

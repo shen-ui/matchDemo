@@ -17,9 +17,8 @@ const SubBoard = ({subs}) => {
         })
 
     }, [subs.HomeTeam.Player, subs.AwayTeam.Player])
-    function setCards(sub){
-        console.log(sub)
-        
+
+    function setCards(sub){   
         if(sub._attributes.RedCards){
             // display red card
         }
@@ -48,7 +47,7 @@ const SubBoard = ({subs}) => {
                             <ul className="home-sub-player" key={index}>
                                 <div className="player-number">{sub._attributes.Number}</div>
                                 <div className="player-name">{sub._attributes.Name}
-                                <div className="home-cards">                              
+                                    <div className="home-cards"> 
                                         <div className="yellowcard-2"/>
                                         <div className="yellowcard-1"/>  
                                     </div>
@@ -69,7 +68,7 @@ const SubBoard = ({subs}) => {
                                 <div className="player-number">{sub._attributes.Number}</div>
                                 <div className="player-name">
                                 <div className="away-cards"> 
-                                        <div className="redcard"/>    
+                                    <div className="redcard"/>    
                                         <div className="yellowcard-1"/>                           
                                         <div className="yellowcard-2"/>
                                     </div>
