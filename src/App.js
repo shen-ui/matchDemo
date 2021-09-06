@@ -43,7 +43,7 @@ function App() {
           console.log(e);
         }
 
-  }, [match, /*data*/]);
+  }, [match /*data*/]);
 
   return(
     <div className="App">
