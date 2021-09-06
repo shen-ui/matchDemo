@@ -3,7 +3,6 @@ import './Player.css'
 
 const Player = ({attributes, imageURL, index}) => {
     function setCards(sub){
-        console.log(sub.Name +" yellow" + " : " + sub.YellowCards);
         
         if(sub.RedCards>0){
             return <div className='yellowcard-3'/>
@@ -14,7 +13,6 @@ const Player = ({attributes, imageURL, index}) => {
         }
         // eslint-disable-next-line
         else if(sub.YellowCards==2){
-            console.log("2");
             return(
                 <>
                     <div className='yellowcard-1'/>
