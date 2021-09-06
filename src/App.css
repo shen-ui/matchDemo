@@ -29,11 +29,11 @@ header{
 
 header .title{
   width: 100%;
-  margin:0 13% 0 0;
+  margin:0 12% 0 0;
  
 }
 header .timestamp{
-  line-height: 0;
+
   font-size: 32%;
   white-space: pre;
 }
@@ -45,19 +45,17 @@ header .timestamp{
   justify-content: center;
   margin: 0 auto;
   width: max-content;
-  height: max-content;
+  height: max;
 }
 .components{
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
-  height: 32em;
+  height: fit-content;
 }
 /* tablet size */
 @media(max-width:1080px){
   .App-container{
     min-width:max-content;
-    min-height: 100vh;
   }
   header{
     font-size: xxx-large;
@@ -78,7 +76,6 @@ header .timestamp{
 @media (max-width:832px){
   .components{
     flex-direction: column;
-    margin: 5vh auto;
     height: fit-content;
   }
   /* remove these from dom */

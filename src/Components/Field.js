@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import Player from './Player'
 import Team1Icon from '../resources/Team1Icon.svg'
 import Team2Icon from '../resources/Team2Icon.svg'
 import './Field.css'
@@ -23,23 +24,70 @@ const Field = ({forms}) => {
 
     }, [forms.HomeTeamFormation.Row,forms.AwayTeamFormation.Row]);
 
-    return(
-        <div className="field-pane">
-                <div className="field-home-team">
-                    <img src={Team1Icon} alt="team icon"/>
-                </div>
-                <div className="field-away-team">
-                    <img src={Team2Icon} alt="team icon"/>
-                </div>
-        {console.log(homeTeam.length)
-        }
-        {
-            homeTeam.map((row)=>{
-                //do something with row
+    function setPlayerRow(row){
 
+        if(row.Player._attributes){
+            //console.log(row.Player._attributes)
+            return <Player 
+                        attributes={row.Player._attributes} 
+                        imageURL={row.Player.ImageUrl}
+
+                    />
+        }
+        else{
+            return row.Player.map((player) => {
+                console.log(player._attributes);
+                return (
+                    <Player 
+                        attributes={player._attributes} 
+                        imageURL={player.Image} 
+
+                    />
+
+                )
             })
         }
+        
+    };
+
+    return(
+        <div className="field-pane">
+            <div className="field-home-team">
+                {   //render Home Team
+                    homeTeam.map((row,index) => {
+                        return(
+                            <div className={`home-row-${index}`} key={index}>
+                            {
+                                setPlayerRow(row)
+                            }
+                            </div>
+                        )    
+                    })
+                }
+            </div>
+            <div className="field-away-team">
+                {    // Render Away Team
+                    awayTeam.map((row,index) => {
+                        return(
+                            <div className={`away-row-${index}`} key={index}>
+                            {
+                                setPlayerRow(row)
+                            }
+                            </div>
+                        )    
+                    })
+                }
+            </div>
         </div>
     )
 }
 export default Field;
+
+/* 
+            <div className="field-home-team">
+                <img src={Team1Icon} alt="team icon"/>
+            </div>
+            <div className="field-away-team">
+                <img src={Team2Icon} alt="team icon"/>
+            </div>
+*/

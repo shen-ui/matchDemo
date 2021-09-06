@@ -16,8 +16,8 @@ const Header = ({timeStamp, location}) => {
             timeStamp.slice(8,10) + "/" + 
             timeStamp.slice(0,4)  + "\t" +
             hour + ":" + 
-            timeStamp.slice(14,16) +  
-            merid 
+            timeStamp.slice(14,16) +  " " +
+            merid +"   "
 
 
         return(time);    
@@ -26,12 +26,12 @@ const Header = ({timeStamp, location}) => {
     return(
         <header>
             <img src={LeagueIcon} alt="League"/>
-                <p className="title">
+                <div className="title">
                     MATCH SUMMARY
                     <p className="timestamp">
                         {dateConfig()}{location}
                     </p>
-                </p>
+                </div>
         </header>
     )
 }

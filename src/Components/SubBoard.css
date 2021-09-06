@@ -3,7 +3,7 @@
     min-width: 320px;
     width:100%;
     display:flex;
-    margin: 5vh 4vw 5vh;
+    margin: 6vh 4vw 5vh;
     flex-direction: column;
   }
   .sub-pane-container{
@@ -14,7 +14,7 @@
   /*Banner for sub-pane*/
   .sub-banner{
     display:flex;
-    vertical-align: auto;
+    align-items: center;
     justify-content: space-between;
     font-weight: bold;
     font-size: 14px;
@@ -28,6 +28,7 @@
     height: 72px;
   }
   
+  /* inner substitution board*/
   .sub-pane .team{
     width: 50%;
   }
