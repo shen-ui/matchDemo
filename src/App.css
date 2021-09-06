@@ -56,6 +56,7 @@ header .timestamp{
 @media(max-width:1080px){
   .App-container{
     min-width:max-content;
+
   }
   header{
     font-size: xxx-large;

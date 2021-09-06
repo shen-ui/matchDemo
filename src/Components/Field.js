@@ -36,7 +36,7 @@ const Field = ({forms}) => {
         }
         else{
             return row.Player.map((player) => {
-                console.log(player._attributes);
+
                 return (
                     <Player 
                         attributes={player._attributes} 

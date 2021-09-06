@@ -1,13 +1,8 @@
 import PlayerIcon from '../resources/PlayerIcon.svg'
-import { useEffect } from 'react';
 import './Player.css'
 
 const Player = ({attributes, imageURL, index}) => {
     //imageURL is empty for now
-    useEffect(() => {
-        console.log(attributes)
-    }, [attributes])
-
     return(
         <div className="player"
              key={index}

@@ -17,7 +17,18 @@ const SubBoard = ({subs}) => {
         })
 
     }, [subs.HomeTeam.Player, subs.AwayTeam.Player])
-
+    function setCards(sub){
+        console.log(sub)
+        
+        if(sub._attributes.RedCards){
+            // display red card
+        }
+        else if(sub._attributes.YellowCards>=1){
+            const fouls = sub._attributes.YellowCard;
+            // display yellow cards accordingly
+        }
+        
+    }
     return(
         <div className="sub-pane">
             {/* Game Banner */}
@@ -32,12 +43,17 @@ const SubBoard = ({subs}) => {
                 <div className="team">
                 {// set up home team: left side of panel
                     homeSubs.map((sub, index)=>{
+                        setCards(sub);
                         return(
-
                             <ul className="home-sub-player" key={index}>
-                            <div className="player-number">{sub._attributes.Number}</div>
-                            <div className="player-name">{sub._attributes.Name}</div>
-                    </ul>
+                                <div className="player-number">{sub._attributes.Number}</div>
+                                <div className="player-name">{sub._attributes.Name}
+                                <div className="home-cards">                              
+                                        <div className="yellowcard-2"/>
+                                        <div className="yellowcard-1"/>  
+                                    </div>
+                                </div>
+                            </ul>
 
                         )
                     })
@@ -47,11 +63,19 @@ const SubBoard = ({subs}) => {
                 <div className="team">
                 {// set up away team: right side of panel
                     awaySubs.map((sub, index)=>{
+                        setCards(sub);
                         return(
-                                <ul className="away-sub-player" key={index}>
-                                        <div className="player-number">{sub._attributes.Number}</div>
-                                        <div className="player-name">{sub._attributes.Name}</div>
-                                </ul>
+                            <ul className="away-sub-player" key={index}>
+                                <div className="player-number">{sub._attributes.Number}</div>
+                                <div className="player-name">
+                                <div className="away-cards"> 
+                                        <div className="redcard"/>    
+                                        <div className="yellowcard-1"/>                           
+                                        <div className="yellowcard-2"/>
+                                    </div>
+                                    {sub._attributes.Name}
+                                </div>
+                            </ul>
                         )
                     })
                 }

@@ -15,7 +15,7 @@
   display:flex;
   flex-direction: column-reverse;
   height: 50%;
-  flex: 2;
+  flex: 1.4;
 }
 .field-pane .field-home-team > div{
   display: flex;
@@ -37,13 +37,13 @@
   display: flex;
   flex-direction: row;
   justify-content:space-around;
-  padding: auto;
+  align-items: center;
   flex-grow: 1;
 }
 
 @media (max-width:832px){
   .field-pane{
-    margin: 4vh auto;
+    margin: 4vh auto 0;
   }
 
 }
