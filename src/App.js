@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import axios from 'axios';
 
 import './App.css';
@@ -14,14 +14,14 @@ const convert = require("xml-js");
 function App() {
   const [data, setData] = useState();
   const [match, setMatch] = useState();
-  const inputRef = useRef();
 
   useEffect(() => {
     try{
         axios
           .get(`https://static.yinzcam.com/interviews/web/api/${match}.xml`, {
             'Content-Type': "applications/xml",
-            'Cache-Control': 'max-age=30',
+            //'Cache-Control': 'max-age=30',
+            // the dom re-renders on every api call with setData... I'll need to figure this out.
             // header is max-age=30, should I have dynamically called this somehow?
           })
           .then((res) => {
@@ -29,14 +29,8 @@ function App() {
               convert.xml2json(res.data, {compact: true, spaces: 2})
             );
             // Only need xml metadata for error handling.
-            if(parser.Formation == data){
-                return;
-            }
-            else{
-              console.log("rerender");
-              setData([]);
-              setData(parser.Formation);
-            }
+            let newData = parser.Formation;
+              controlRenders(newData);
           })
           .catch((err) => {
             console.log("error: ", err);
@@ -47,7 +41,12 @@ function App() {
 
 
   }, [data, match]);
-
+  function controlRenders(newData){
+    if(newData === data){
+      return;
+    }
+    else setData(newData);
+  }
   return(
     <div className="App">
       { // empty state ? loading : app components
@@ -57,7 +56,7 @@ function App() {
               <img src={LeagueIcon}/>
 
             <input placeholder='match 1, 2, 3'
-                   ref={inputRef}
+
                    value={match}
                    onChange={e => setMatch(e.target.value)}>
             </input>

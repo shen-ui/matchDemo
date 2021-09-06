@@ -3,7 +3,6 @@ import './Player.css'
 
 const Player = ({attributes, imageURL, index}) => {
     function setCards(sub){
-        console.log(imageURL);
         
         if(sub.RedCards>0){
             return <div className='yellowcard-3'/>
