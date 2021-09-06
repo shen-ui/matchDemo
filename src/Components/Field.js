@@ -36,7 +36,7 @@ const Field = ({forms}) => {
                 return (
                     <Player 
                         attributes={player._attributes} 
-                        imageURL={player.Image} 
+                        imageURL={player._attributes.ImageUrl} 
 
                     />
 

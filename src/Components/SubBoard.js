@@ -21,7 +21,6 @@ const SubBoard = ({subs}) => {
     }, [subs.HomeTeam.Player, subs.AwayTeam.Player])
 
     function setCards(sub){
-        console.log(sub._attributes.Name + " : " + sub._attributes.YellowCards);
         if(sub._attributes.RedCards>0){
             return (
                 <div className='yellowcard-3'/>

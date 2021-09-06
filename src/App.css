@@ -8,6 +8,30 @@
   color: white;
 
 }
+.search-pane{
+  height:100%;
+  width: 100%;
+}
+.search-pane img{
+  position:absolute;
+  top:33%;
+  left: 44%;
+  width:auto;
+}
+.search-pane input{
+  position:absolute;
+  top:50%;
+  left: 25%;
+  border-radius: 15px;
+  width: 50vw;
+  height: 5vh;
+}
+.search-pane input::placeholder{
+  text-align: center;
+}
+.search-pane input{
+  text-align: center;
+}
 .loading-icon{
   position: absolute;
   left: 45%;
