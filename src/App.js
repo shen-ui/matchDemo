@@ -20,7 +20,7 @@ function App() {
         axios
           .get(`https://static.yinzcam.com/interviews/web/api/${match}.xml`, {
             'Content-Type': "applications/xml",
-            //'Cache-Control': 'max-age=30',
+            'Cache-Control': 'max-age=30',
             // the dom re-renders on every api call with setData... I'll need to figure this out.
             // header is max-age=30, should I have dynamically called this somehow?
           })
@@ -30,7 +30,11 @@ function App() {
             );
             // Only need xml metadata for error handling.
             let newData = parser.Formation;
-              controlRenders(newData);
+            if(newData === data){
+              console.log("no new data");
+              return;
+            }
+            else setData(newData);
           })
           .catch((err) => {
             console.log("error: ", err);
@@ -39,14 +43,8 @@ function App() {
           console.log(e);
         }
 
+  }, [match, /*data*/]);
 
-  }, [data, match]);
-  function controlRenders(newData){
-    if(newData === data){
-      return;
-    }
-    else setData(newData);
-  }
   return(
     <div className="App">
       { // empty state ? loading : app components
@@ -54,7 +52,7 @@ function App() {
         ? <div className="search-pane">
 
             <div className="search-pane-container">
-              <img src={LeagueIcon}/>
+            <img src={LeagueIcon} alt="logo"/>
               <input placeholder='match 1, 2, 3'
                     value={match}
                     onChange={e => setMatch(e.target.value)}>

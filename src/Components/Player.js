@@ -1,9 +1,8 @@
 import PlayerIcon from '../resources/PlayerIcon.svg'
 import './Player.css'
 
-const Player = ({attributes, imageURL, index}) => {
+const Player = ({attributes, imageURL}) => {
     function setCards(sub){
-        
         if(sub.RedCards>0){
             return <div className='yellowcard-3'/>
         }
@@ -23,6 +22,7 @@ const Player = ({attributes, imageURL, index}) => {
         else return;
         
     }
+
     function isEmpty(obj) {
         for(var key in obj) {
             if(obj.hasOwnProperty(key))
@@ -30,16 +30,15 @@ const Player = ({attributes, imageURL, index}) => {
         }
         return true;
     }
+
     return(
         <div className="player"
-             key={index}
+             key={attributes.Number}
         >
-            <div className="player-container">
+            <div className="player-container" key={attributes.Number}>
                     {
                         setCards(attributes)
-                        
                     }
-
                 <img className="player-icon" src={(imageURL===undefined || isEmpty(imageURL)) ? PlayerIcon : `url(${imageURL})`} alt="player icon"/>
                 <div>{attributes.Name}</div>
             </div>

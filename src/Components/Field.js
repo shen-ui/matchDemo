@@ -28,7 +28,6 @@ const Field = ({forms}) => {
             return <Player 
                         attributes={row.Player._attributes} 
                         imageURL={row.Player.ImageUrl}
-
                     />
         }
         else{
@@ -37,7 +36,6 @@ const Field = ({forms}) => {
                     <Player 
                         attributes={player._attributes} 
                         imageURL={player._attributes.ImageUrl} 
-
                     />
 
                 )
