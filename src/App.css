@@ -12,17 +12,19 @@
   height:100%;
   width: 100%;
 }
+.search-pane-container{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
 .search-pane img{
-  position:absolute;
-  top:33%;
-  left: 44%;
-  width:auto;
+  width:14vw;
+  margin: 2em;
 }
 .search-pane input{
-  position:absolute;
-  top:50%;
-  left: 25%;
-  border-radius: 15px;
+  border-radius: 20px;
   width: 50vw;
   height: 5vh;
 }

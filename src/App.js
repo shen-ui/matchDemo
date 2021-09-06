@@ -53,13 +53,13 @@ function App() {
         data == null
         ? <div className="search-pane">
 
+            <div className="search-pane-container">
               <img src={LeagueIcon}/>
-
-            <input placeholder='match 1, 2, 3'
-
-                   value={match}
-                   onChange={e => setMatch(e.target.value)}>
-            </input>
+              <input placeholder='match 1, 2, 3'
+                    value={match}
+                    onChange={e => setMatch(e.target.value)}>
+              </input>
+            </div>
           </div>
         : <div className="App-container">
               <Header timeStamp={data.Timestamp._text} location={data.Venue._text}/>
