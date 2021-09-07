@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import Player from './Player'
 import Team1Icon from '../resources/Team1Icon.svg'
 import Team2Icon from '../resources/Team2Icon.svg'
@@ -31,12 +31,14 @@ const Field = ({forms}) => {
                     />
         }
         else{
-            return row.Player.map((player) => {
+            return row.Player.map((player, index) => {
                 return (
+                    <React.Fragment key={index}>
                     <Player 
                         attributes={player._attributes} 
                         imageURL={player._attributes.ImageUrl} 
                     />
+                    </React.Fragment>
 
                 )
             })

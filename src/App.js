@@ -16,11 +16,10 @@ function App() {
   const [match, setMatch] = useState();
 
   useEffect(() => {
-    try{
         axios
-          .get(`https://static.yinzcam.com/interviews/web/api/${match}.xml`, {
+          .get(`https://static.yinzcam.com/interviews/web/api/match${match}.xml`, {
             'Content-Type': "applications/xml",
-            'Cache-Control': 'max-age=30',
+            'Cache-Control': 'max-age=30'
             // the dom re-renders on every api call with setData... I'll need to figure this out.
             // header is max-age=30, should I have dynamically called this somehow?
           })
@@ -39,26 +38,23 @@ function App() {
           .catch((err) => {
             console.log("error: ", err);
           })
-        }catch(e){
-          console.log(e);
-        }
-
   }, [match /*data*/]);
 
   return(
     <div className="App">
       { // empty state ? loading : app components
-        data == null
-        ? <div className="search-pane">
+        (data == null)
 
+        ? <div className="search-pane">
             <div className="search-pane-container">
             <img src={LeagueIcon} alt="logo"/>
-              <input placeholder='match 1, 2, 3'
+              <input placeholder='1, 2 or 3'
                     value={match}
                     onChange={e => setMatch(e.target.value)}>
               </input>
             </div>
           </div>
+          
         : <div className="App-container">
               <Header timeStamp={data.Timestamp._text} location={data.Venue._text}/>
               <div className="components">
