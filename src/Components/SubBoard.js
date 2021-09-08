@@ -10,7 +10,10 @@ const SubBoard = ({subs}) => {
     const[awaySubs, setAwaySubs] = useState([]);
 
     useEffect(() => {
-
+        // empty array before rendering
+        setHomeSubs([]);
+        setAwaySubs([]);
+        console.log();
         subs.HomeTeam.Player.forEach((player)=>{
             setHomeSubs(homeSubs => [player,...homeSubs])
         })

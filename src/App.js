@@ -16,10 +16,13 @@ function App() {
   const [match, setMatch] = useState();
 
   useEffect(() => {
+    try{
         axios
           .get(`https://static.yinzcam.com/interviews/web/api/match${match}.xml`, {
-            'Content-Type': "applications/xml",
-            'Cache-Control': 'max-age=30'
+            'headers': {
+              'Content-Type': 'applications/xml',
+              'Cache-Control': 'max-age=300'
+            }
             // the dom re-renders on every api call with setData... I'll need to figure this out.
             // header is max-age=30, should I have dynamically called this somehow?
           })
@@ -27,23 +30,29 @@ function App() {
             const parser = JSON.parse(
               convert.xml2json(res.data, {compact: true, spaces: 2})
             );
+
             // Only need xml metadata for error handling.
             let newData = parser.Formation;
-            if(newData === data){
-              console.log("no new data");
-              return;
-            }
-            else setData(newData);
+            //console.log("no new data");
+              if(Object.is(newData, data)){
+                console.log("no new data");
+                return;
+              }
+              else {setData(newData);
+              }
           })
           .catch((err) => {
             console.log("error: ", err);
           })
-  }, [match /*data*/]);
+        }catch(e){
+          console.log(e)
+    }
+  }, [match,data]);
 
   return(
     <div className="App">
       { // empty state ? loading : app components
-        (data == null)
+        data == null
 
         ? <div className="search-pane">
             <div className="search-pane-container">

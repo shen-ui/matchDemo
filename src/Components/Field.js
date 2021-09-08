@@ -11,7 +11,8 @@ const Field = ({forms}) => {
 
 
     useEffect(() => {
-
+        setAwayTeam([]);
+        setHomeTeam([]);
         forms.HomeTeamFormation.Row.forEach((row)=>{
             setHomeTeam(homeTeam => [row,...homeTeam])
         })
